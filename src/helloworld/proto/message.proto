@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = ".;message";
+
+service MessageSender {
+    rpc Send (MsgRequest) returns (MsgResponse){}
+}
+
+message MsgRequest {
+    string saySomething = 1;
+}
+
+message MsgResponse {
+    string responseSomething = 1;
+}
